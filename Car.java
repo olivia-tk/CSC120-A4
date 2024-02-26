@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Car {
     private ArrayList<Passenger> passengers;
@@ -22,6 +23,7 @@ public class Car {
     public boolean addPassenger(Passenger passenger) {
         if (seatsRemaining() > 0) {
             passengers.add(passenger);
+            System.out.println("Passenger boarded car.");
             return true;
         } else {
             System.out.println("No available seats in the car.");
@@ -33,6 +35,7 @@ public class Car {
     public boolean removePassenger(Passenger passenger) {
         if (passengers.contains(passenger)) {
             passengers.remove(passenger);
+            System.out.println("Passenger got off car.");
             return true;
         } else {
             System.out.println("Passenger is not onboard the car.");
